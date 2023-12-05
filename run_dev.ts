@@ -1,3 +1,5 @@
+// UNUSED_FILE
+
 // for dev build
 
 await Bun.build({
@@ -11,7 +13,7 @@ Bun.serve({
     const url = new URL(req.url)
     console.log(url.pathname)
     if (url.pathname === "/index.js") {
-      return new Response(Bun.file("./.cache/index.js"))
+      return new Response(Bun.file("./.cache/index.js", {}))
     }
     if (url.pathname === "/") {
       return new Response(Bun.file("./public/index.html"))
